@@ -69,11 +69,22 @@ function StatusPage() {
     }
 
     return <>
-      <div style={{marginBottom: 10, display: "flex", justifyContent: "space-between", alignItems: "center", borderBottom: "1.5px solid #aaaaaaff", paddingBottom: 4, marginTop: -8}}>
-        <span>{time}
-          <span style={{fontWeight: 300, fontSize: "70%", fontStyle: "italic",}}>&nbsp;&nbsp;{dateWithSuffix}</span>
-        </span> 
-        <span style={{alignContent: "right", fontWeight: 300, fontStyle: "italic", fontSize: "70%"}}>({relativeTime})<br /></span>
+      <div>
+        <div>{time}</div>
+        <div style={{
+          marginBottom: 10, 
+          display: "flex", 
+          justifyContent: "space-between", 
+          alignItems: "center", 
+          borderBottom: "1.5px solid #aaaaaaff", 
+          paddingBottom: 8, 
+          paddingTop: 4,
+          flexWrap: "wrap",
+          gap: "8px"
+        }}>
+          <span style={{fontWeight: 300, fontSize: "70%", fontStyle: "italic"}}>{dateWithSuffix}</span>
+          <span style={{fontWeight: 300, fontStyle: "italic", fontSize: "70%"}}>({relativeTime})</span>
+        </div>
       </div>
     </>;
   };
